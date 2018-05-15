@@ -53,7 +53,7 @@ public class SmsApiController {
 			if (isCheckRegister == null) {
 				isCheckRegister = 0;
 			}
-			
+			//这里生成短信验证码
 			Map<String, Object> sendResult = SmsUtil.sendMobileSms(mobile, key, isCheckRegister);
 			int stateCode = Integer.parseInt(sendResult.get("state_code").toString());
 			
